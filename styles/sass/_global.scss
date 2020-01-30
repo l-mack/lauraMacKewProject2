@@ -1,0 +1,145 @@
+// accessibility
+
+.visuallyHidden:not(:focus):not(:active) { 
+    position: absolute !important;
+    height: 1px; 
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap; /* added line */
+  }
+
+  // what's going on
+  // *{
+  //   border: 1px solid aquamarine;
+  // }
+
+  // stripping styles
+
+body,
+ul,
+h1,
+h2,
+h3,
+p,
+a,
+i{
+    margin: 0;
+	padding: 0;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* base styling */
+
+img{
+  width: 100%;
+  display: block;
+}
+
+html{
+  letter-spacing: 1px;
+}
+
+.wrapper{
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.wrapperContain{
+  width: 80%;
+}
+
+// nav stying
+nav{
+  background: $pine;
+  padding: 10px;
+  text-transform: uppercase;
+
+  ul{
+    @include centerFlex;
+
+    p{
+      font-family: $primaryFont;
+      @include fontSize(15);
+      color: $white;
+      padding: 0 10px;
+    }
+    a{
+      font-family: $secondaryFont;
+      color: $white;
+      padding: 0 20px;
+      font-weight: 900;
+      @include fontSize(7);
+
+    }
+  }
+}
+
+// global font styles 
+
+h1{
+  font-family: $primaryFont;
+  color: $white;
+  @include fontSize(75);
+  text-transform: uppercase;
+}
+
+h2{
+  @include fontSize(20);
+  font-family: $primaryFont;
+  color: $black;
+  text-transform: uppercase;
+  padding: 10px;
+}
+
+h3{
+  @include fontSize(15);
+  font-family: $primaryFont;
+  color: $black;
+  text-transform: uppercase;
+  padding: 10px;
+}
+
+p{
+  @include fontSize(8);
+  font-family: $secondaryFont;
+  line-height: 20px;
+  padding: 10px;
+}
+
+button{
+  border: none;
+  padding: 10px 15px;
+  font-family: $primaryFont;
+  text-transform: uppercase;
+  background: $accent;
+  @include fontSize(8);
+}
+
+
+// footer style
+
+.footerIcon{
+  i{
+    background: $accent;
+    border-radius: 50%;
+    padding: 10px;
+
+  }
+}
+
+.copywright{
+  text-align: center;
+  background: $black;
+  color: $white;
+}
+
+

@@ -1,0 +1,128 @@
+// header styling
+header{
+    background-color: $pine;
+    background-size: 50%;
+
+    .homeFlex{
+        @include centerFlex;
+        position: relative;
+        
+
+        .profileImg{
+            width: 25%;
+            transform: translate(10px, 70px);
+        }
+    }
+}
+
+// align about section 
+
+.about{
+    margin-top: 60px;
+    padding: 10% 0;
+
+    .who{
+        background: $white;
+        font-family: $primaryFont;
+
+        .whoTextbox{
+            @include centerFlex;
+            flex-direction: column;
+            padding: 30px;
+            margin: 5% 10%;
+        }
+
+        p{
+            text-align: center;
+        }
+  
+    }
+}
+
+// align articles section 
+
+.articleFlex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bridgeImg{
+    transform: translate(22%, -10%);
+    width: 80%;
+}
+
+.favoriteBackground{
+    background: $greenGrey;
+    margin: 5%, 0;
+    margin-right: 2%;
+}
+
+.articleTextbox{
+    text-align: left;
+    padding: 5%;
+    width: 50%;
+}
+
+.flowerImg{
+    transform: translate(-3%, -10%);
+    width: 80%;
+}
+
+.bucketBackground{
+    background: $pine;
+    margin: 5% 0;
+    margin-left: 2%;
+
+}
+
+// align journey section
+
+.jouney{
+    background: $white;
+}
+
+
+.journeyFlex{
+    display: flex;
+    padding: 10% 0;
+
+}
+
+.journeyBackground{
+    margin-right: 10%;
+    width: 100%;
+
+}
+
+.raincoatImg{
+    box-shadow: $greenGrey 10px 10px;
+}
+
+// align gallery section 
+
+.galleryFlex{
+    display: flex;
+    padding: 10% 0;
+
+    .galleryImg{
+        padding: 2%;
+    }
+}
+
+// align home footer section 
+
+footer{
+    background: $white;
+    .footerGrid{
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        padding: 10% 0;
+    }
+}
+
+.footerFlex{
+    display: flex;
+}
+
