@@ -18,18 +18,15 @@ header{
 // align about section 
 
 .about{
-    margin-top: 60px;
-    padding: 10% 0;
-
+    
     .who{
-        background: $white;
         font-family: $primaryFont;
+        background: $white;
 
         .whoTextbox{
             @include centerFlex;
             flex-direction: column;
-            padding: 30px;
-            margin: 5% 10%;
+            padding: 5% 0 10% 0;
         }
 
         p{
@@ -42,9 +39,7 @@ header{
 // align articles section 
 
 .articleFlex{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include centerFlex;
 }
 
 .bridgeImg{
@@ -52,29 +47,35 @@ header{
     width: 80%;
 }
 
-.favoriteBackground{
-    background: $greenGrey;
-    margin: 5%, 0;
-    margin-right: 2%;
-}
-
-.articleTextbox{
-    text-align: left;
-    padding: 5%;
-    width: 50%;
-}
-
 .flowerImg{
     transform: translate(-3%, -10%);
     width: 80%;
 }
 
+.favoriteBackground{
+    background: $greenGrey;
+    margin-top: 5%;
+    margin-right: 2%;
+    margin-bottom: 7%;
+}
+
 .bucketBackground{
     background: $pine;
-    margin: 5% 0;
     margin-left: 2%;
-
 }
+
+.favoriteTextbox{
+    text-align: left;
+    padding: 0 5% 5% 5%;
+    width: 50%;
+}
+
+.bucketlistTextbox{
+    text-align: right;
+    padding: 0 5% 5% 5%;
+    width: 50%;
+}
+
 
 // align journey section
 

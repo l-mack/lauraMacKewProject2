@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Montserrat:400,700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/21907e9303.js"></script>
     <link rel="stylesheet" href="./styles/style.css">
     <title>Contact</title>
@@ -16,74 +17,78 @@
             <li><a href="#home">home</a></li>
             <li><a href="#about">about</a></li>
             <li><p class='logo'>willow</p></li>
-            <li><a href="#blog">contact</a></li>
+            <li><a href="#blog">blog</a></li>
             <li><a href="#contact">contact</a></li>
         </ul>
     <!-- nav ends  -->
     </nav>
 
      <!-- contact header begins  -->
-     <header class='blog' id='blog'>
-        <h3>contact me</h3>
+     <header class="contact" id='contact'>
+        <h1>contact me</h1>
 
     <!-- contact header ends  -->
      </header>
 
-     <main>
+     <main class='mainContact'>
+        <!-- start of contact wrapper  -->
+        <div class="wrapper wrapperContain">
+            <!-- contact grid start  -->
+            <div class="contactGrid">
 
-        <form action="GET">
-            <label for="name" class='visuallyHidden'>Name</label>
-            <input type="text" name="name" id="name" placeholder="Name">
+                <aside>
+                    <!-- start of asideFlex  -->
+                    <div class="asideFlex">
+                
+                        <ul class="socialFlex">
+                            <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                            <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
+                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        </ul>
+                        
+                        <p class="info">info@email.com</p>
+                        <p>123-456-7890</p>
+                        <p>123 Queen St. W Unit 10</p>
+                        <p>Toronto ON</p>
+                        <p>M0P3N9</p>
+                    
+                    <!-- end of asideFlex  -->
+                    </div>
+                
+                </aside>
 
-            <label for="email" class='visuallyHidden'>Email address</label>
-            <input type="email" name="email" id="email" placeholder="Email address">
+                <form action="GET">
 
-            <label for="message" class='visuallyHidden'>message</label>
-
-            <label for="message" class='visuallyHidden'>message</label>
-            <textarea name="message" id="message" cols="30" rows="10"></textarea>
-
-            <button type="submit">submit</button>
-
-        </form>
-
-
-    <!-- contact wrapper ends  -->
-     </div>
-
-<!-- contact main ends  -->
- </main>
-
- <aside>
-    <!-- start of asideFlex  -->
-    <div class="asideFlex">
-
-        <ul class="socialFlex">
-            <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
-            <li><a href=""><i class="fab fa-twitter"></i></a></li>
-            <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
-            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-        </ul>
+                    <div class="nameEmailFlex">
+                        <label for="name" class='visuallyHidden'>Name</label>
+                        <input type="text" name="name" id="name" placeholder="Name">
         
-        <p class="info">info@email.com</p>
-        <p>123-456-7890</p>
-        <p>123 Queen St. W Unit 10</p>
-        <p>Toronto ON</p>
-        <p>M0P3N9</p>
-    
-    <!-- end of asideFlex  -->
-    </div>
+                        <label for="email" class='visuallyHidden'>Email address</label>
+                        <input type="email" name="email" id="email" placeholder="Email address">
 
- </aside>
-   
- <footer>
+                    </div>
 
-    <p>Copywright © 2018 HakerYou</p>
+                    <label for="message" class='visuallyHidden'>message</label>
+                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
 
-</footer>
+                    <button type="submit">submit</button>
+
+                </form>
 
 
-     </main>
+            <!-- contact grid ends  -->
+            </div>
+        <!-- end of content wrapper  -->
+        </div>
+
+    <!-- contact main ends  -->
+    </main>
+
+    <footer>
+        <p class = 'copywright'>Copywright © 2018 HakerYou</p>
+
+    </footer>
     
 </body>
 </html>

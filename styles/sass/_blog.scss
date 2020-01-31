@@ -1,0 +1,75 @@
+// blog styles
+
+.mainBlog{
+    background: $white;
+}
+
+.blog{
+    background-image: url(../willowAssets/blog-image-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50vh;
+    position: relative;
+
+    h1{
+        color: white;
+        @include fontSize(35);
+        position: absolute;
+        top: 82.5%;
+        left: 10%;
+    }
+}
+    h4{
+        @include primaryFont;
+        @include fontSize(12);
+    }
+
+    .aboutWillowTextbox,
+    .profileimg,
+    .recentTextbox,
+    .articleTextbox,
+    .commentFlex{
+        background: white;
+        padding: 30px;
+    }
+
+    .articleTextbox{
+        margin-bottom: 20px;
+        border-bottom: $greenGrey solid 2px;
+    }
+
+    .recentTextbox{
+        li{
+            font-family: $secondaryFont;
+            @include fontSize(8);
+            list-style-type: disc;
+            margin-left: 3%;
+            padding: 5px;
+        }
+    }
+
+    
+a{
+    color: $greenGrey;
+    font-weight: 900;
+}
+
+// blog alignment 
+
+.blogGrid{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 40px;
+    margin-top: 10%;
+    padding: 5%;
+}
+
+.commentFlex{
+    display: flex;
+
+    .imgComment{
+        width: 50%;
+        padding: 5px;
+    }
+}
+

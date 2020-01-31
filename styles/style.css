@@ -248,6 +248,7 @@ html {
 }
 
 body,
+main,
 ul,
 h1,
 h2,
@@ -257,6 +258,13 @@ a,
 i {
   margin: 0;
   padding: 0;
+}
+
+header,
+main,
+section,
+footer {
+  overflow: hidden;
 }
 
 li {
@@ -288,7 +296,7 @@ html {
 
 nav {
   background: #345231;
-  padding: 10px;
+  padding: 20px;
   text-transform: uppercase;
 }
 
@@ -306,8 +314,8 @@ nav ul {
 
 nav ul p {
   font-family: "Abril Fatface", cursive;
-  font-size: 15px;
-  font-size: 1.5rem;
+  font-size: 20px;
+  font-size: 2rem;
   color: #f6f6f6;
   padding: 0 10px;
 }
@@ -317,8 +325,15 @@ nav ul a {
   color: #f6f6f6;
   padding: 0 20px;
   font-weight: 900;
-  font-size: 7px;
-  font-size: 0.7rem;
+  font-size: 9px;
+  font-size: 0.9rem;
+  -webkit-transition: 5ms;
+  transition: 5ms;
+}
+
+a:hover,
+a:focus {
+  color: #E4A436;
 }
 
 h1 {
@@ -363,12 +378,42 @@ button {
   background: #E4A436;
   font-size: 8px;
   font-size: 0.8rem;
+  cursor: pointer;
+}
+
+form {
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+form .nameEmailFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+form input,
+form textarea {
+  border: none;
+  border-radius: 2px;
+  padding: 20px;
 }
 
 .footerIcon i {
   background: #E4A436;
   border-radius: 50%;
   padding: 10px;
+  cursor: pointer;
 }
 
 .copywright {
@@ -401,14 +446,9 @@ header .homeFlex .profileImg {
           transform: translate(10px, 70px);
 }
 
-.about {
-  margin-top: 60px;
-  padding: 10% 0;
-}
-
 .about .who {
-  background: #f6f6f6;
   font-family: "Abril Fatface", cursive;
+  background: #f6f6f6;
 }
 
 .about .who .whoTextbox {
@@ -425,8 +465,7 @@ header .homeFlex .profileImg {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 30px;
-  margin: 5% 10%;
+  padding: 5% 0 10% 0;
 }
 
 .about .who p {
@@ -451,28 +490,34 @@ header .homeFlex .profileImg {
   width: 80%;
 }
 
-.favoriteBackground {
-  background: #709b6b;
-  margin: 5%, 0;
-  margin-right: 2%;
-}
-
-.articleTextbox {
-  text-align: left;
-  padding: 5%;
-  width: 50%;
-}
-
 .flowerImg {
   -webkit-transform: translate(-3%, -10%);
           transform: translate(-3%, -10%);
   width: 80%;
 }
 
+.favoriteBackground {
+  background: #709b6b;
+  margin-top: 5%;
+  margin-right: 2%;
+  margin-bottom: 7%;
+}
+
 .bucketBackground {
   background: #345231;
-  margin: 5% 0;
   margin-left: 2%;
+}
+
+.favoriteTextbox {
+  text-align: left;
+  padding: 0 5% 5% 5%;
+  width: 50%;
+}
+
+.bucketlistTextbox {
+  text-align: right;
+  padding: 0 5% 5% 5%;
+  width: 50%;
 }
 
 .jouney {
@@ -525,4 +570,143 @@ footer .footerGrid {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.mainBlog {
+  background: #f6f6f6;
+}
+
+.blog {
+  background-image: url(../willowAssets/blog-image-1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50vh;
+  position: relative;
+}
+
+.blog h1 {
+  color: white;
+  font-size: 35px;
+  font-size: 3.5rem;
+  position: absolute;
+  top: 82.5%;
+  left: 10%;
+}
+
+h4 {
+  font-family: "Abril Fatface", cursive;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-size: 1.2rem;
+}
+
+.aboutWillowTextbox,
+.profileimg,
+.recentTextbox,
+.articleTextbox,
+.commentFlex {
+  background: white;
+  padding: 30px;
+}
+
+.articleTextbox {
+  margin-bottom: 20px;
+  border-bottom: #709b6b solid 2px;
+}
+
+.recentTextbox li {
+  font-family: "Montserrat", sans-serif;
+  font-size: 8px;
+  font-size: 0.8rem;
+  list-style-type: disc;
+  margin-left: 3%;
+  padding: 5px;
+}
+
+a {
+  color: #709b6b;
+  font-weight: 900;
+}
+
+.blogGrid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr;
+      grid-template-columns: 1fr 2fr;
+  grid-gap: 40px;
+  margin-top: 10%;
+  padding: 5%;
+}
+
+.commentFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.commentFlex .imgComment {
+  width: 50%;
+  padding: 5px;
+}
+
+.mainContact {
+  background: #f6f6f6;
+}
+
+.contact {
+  background-image: url(../willowAssets/contact-image-1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50vh;
+  position: relative;
+}
+
+.contact h1 {
+  color: white;
+  font-size: 35px;
+  font-size: 3.5rem;
+  position: absolute;
+  top: 80%;
+  left: 10%;
+}
+
+.contactGrid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr;
+      grid-template-columns: 1fr 2fr;
+  grid-gap: 40px;
+  margin-top: 5%;
+  padding: 5%;
+}
+
+.asideFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: white;
+  padding: 20px 10px 0 10px;
+}
+
+.asideFlex .socialFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.asideFlex .socialFlex li {
+  padding: 0 10px;
+}
+
+.asideFlex .socialFlex li a,
+.asideFlex .socialFlex li p {
+  color: #345231;
+}
+
+.info {
+  font-weight: 900;
 }

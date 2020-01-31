@@ -1,0 +1,50 @@
+// contact styles 
+
+.mainContact{
+    background: $white;
+}
+.contact{
+    background-image: url(../willowAssets/contact-image-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50vh;
+    position: relative;
+
+    h1{
+        color: white;
+        @include fontSize(35);
+        position: absolute;
+        top: 80%;
+        left: 10%;
+    }
+}
+
+.contactGrid{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 40px;
+    margin-top: 5%;
+    // background: $white;
+    padding: 5%;
+}
+
+.asideFlex{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 20px 10px 0 10px;
+    .socialFlex{
+        display: flex;
+        li{
+            padding: 0 10px;
+            a,
+            p{
+                color: $pine;
+            }
+        }
+    }
+}
+
+.info{
+    font-weight: 900;
+}

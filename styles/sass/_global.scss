@@ -18,6 +18,7 @@
   // stripping styles
 
 body,
+main,
 ul,
 h1,
 h2,
@@ -25,8 +26,15 @@ h3,
 p,
 a,
 i{
-    margin: 0;
+  margin: 0;
 	padding: 0;
+}
+
+header,
+main,
+section,
+footer{
+  overflow: hidden;
 }
 
 li{
@@ -60,7 +68,7 @@ html{
 // nav stying
 nav{
   background: $pine;
-  padding: 10px;
+  padding: 20px;
   text-transform: uppercase;
 
   ul{
@@ -68,7 +76,7 @@ nav{
 
     p{
       font-family: $primaryFont;
-      @include fontSize(15);
+      @include fontSize(20);
       color: $white;
       padding: 0 10px;
     }
@@ -77,10 +85,17 @@ nav{
       color: $white;
       padding: 0 20px;
       font-weight: 900;
-      @include fontSize(7);
+      @include fontSize(9);
+      transition: 5ms;
 
     }
   }
+}
+
+a:hover,
+a:focus{
+  color: $accent;
+
 }
 
 // global font styles 
@@ -122,6 +137,29 @@ button{
   text-transform: uppercase;
   background: $accent;
   @include fontSize(8);
+  cursor: pointer;
+}
+
+// form styling 
+
+form{
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  .nameEmailFlex{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  } 
+  input,
+  textarea{
+    border: none;
+    border-radius: 2px;
+    padding: 20px;
+    
+  }
+  
+
 }
 
 
@@ -132,6 +170,7 @@ button{
     background: $accent;
     border-radius: 50%;
     padding: 10px;
+    cursor: pointer;
 
   }
 }
