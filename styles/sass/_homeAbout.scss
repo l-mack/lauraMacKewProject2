@@ -1,18 +1,37 @@
 // header styling
 header{
     background-color: $pine;
-    background-size: 50%;
+    height: 70vh;
+
+    .circleText{
+        transform: translate(50%, -15%);
+    }
 
     .homeFlex{
         @include centerFlex;
         position: relative;
         
+        .headerTextCont{
+            display: flex;
+        }
 
         .profileImg{
             width: 25%;
             transform: translate(10px, 70px);
+            position: relative;
         }
     }
+}
+
+
+
+.profileImg::before{
+    content: '';
+    background: $pine;
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    left: 96%;
 }
 
 // align about section 
@@ -26,13 +45,12 @@ header{
         .whoTextbox{
             @include centerFlex;
             flex-direction: column;
-            padding: 5% 0 10% 0;
+            padding: 10% 0;
         }
 
         p{
             text-align: center;
         }
-  
     }
 }
 
@@ -54,7 +72,7 @@ header{
 
 .favoriteBackground{
     background: $greenGrey;
-    margin-top: 5%;
+    margin-top: 3%;
     margin-right: 2%;
     margin-bottom: 7%;
 }
@@ -120,6 +138,9 @@ footer{
         grid-template-rows: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
         padding: 10% 0;
+    }
+    a{
+        color: black;
     }
 }
 

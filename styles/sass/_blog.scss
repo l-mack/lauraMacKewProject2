@@ -2,6 +2,11 @@
 
 .mainBlog{
     background: $white;
+    a{
+        color: $greenGrey;
+        font-weight: 900;
+        display: block;
+    }
 }
 
 .blog{
@@ -15,7 +20,7 @@
         color: white;
         @include fontSize(35);
         position: absolute;
-        top: 82.5%;
+        top: 81.5%;
         left: 10%;
     }
 }
@@ -23,8 +28,6 @@
         @include primaryFont;
         @include fontSize(12);
     }
-
-    .aboutWillowTextbox,
     .profileimg,
     .recentTextbox,
     .articleTextbox,
@@ -33,12 +36,18 @@
         padding: 30px;
     }
 
+    .aboutWillowTextbox{
+        padding: 0 30px;
+        background: white;
+    }
+
     .articleTextbox{
         margin-bottom: 20px;
         border-bottom: $greenGrey solid 2px;
     }
 
     .recentTextbox{
+        margin-top: 20px;
         li{
             font-family: $secondaryFont;
             @include fontSize(8);
@@ -48,10 +57,10 @@
         }
     }
 
+.lastComment{
+    margin-top: 20px;
+    border-bottom: $greenGrey solid 2px;
     
-a{
-    color: $greenGrey;
-    font-weight: 900;
 }
 
 // blog alignment 
@@ -61,7 +70,6 @@ a{
     grid-template-columns: 1fr 2fr;
     grid-gap: 40px;
     margin-top: 10%;
-    padding: 5%;
 }
 
 .commentFlex{

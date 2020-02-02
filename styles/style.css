@@ -253,6 +253,7 @@ ul,
 h1,
 h2,
 h3,
+h4,
 p,
 a,
 i {
@@ -260,10 +261,8 @@ i {
   padding: 0;
 }
 
-header,
-main,
-section,
-footer {
+.mainContact,
+.mainBlog {
   overflow: hidden;
 }
 
@@ -300,7 +299,8 @@ nav {
   text-transform: uppercase;
 }
 
-nav ul {
+nav ul,
+nav .navFlexgroup {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -312,7 +312,8 @@ nav ul {
           align-items: center;
 }
 
-nav ul p {
+nav ul p,
+nav .navFlexgroup p {
   font-family: "Abril Fatface", cursive;
   font-size: 20px;
   font-size: 2rem;
@@ -320,7 +321,8 @@ nav ul p {
   padding: 0 10px;
 }
 
-nav ul a {
+nav ul a,
+nav .navFlexgroup a {
   font-family: "Montserrat", sans-serif;
   color: #f6f6f6;
   padding: 0 20px;
@@ -331,8 +333,8 @@ nav ul a {
   transition: 5ms;
 }
 
-a:hover,
-a:focus {
+nav a:hover,
+nav a:focus {
   color: #E4A436;
 }
 
@@ -363,8 +365,8 @@ h3 {
 }
 
 p {
-  font-size: 8px;
-  font-size: 0.8rem;
+  font-size: 9px;
+  font-size: 0.9rem;
   font-family: "Montserrat", sans-serif;
   line-height: 20px;
   padding: 10px;
@@ -373,16 +375,17 @@ p {
 button {
   border: none;
   padding: 10px 15px;
+  margin-top: 10px;
   font-family: "Abril Fatface", cursive;
   text-transform: uppercase;
   background: #E4A436;
-  font-size: 8px;
-  font-size: 0.8rem;
+  font-size: 9px;
+  font-size: 0.9rem;
   cursor: pointer;
 }
 
 form {
-  margin-top: 10px;
+  margin-top: 5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -390,6 +393,7 @@ form {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-bottom: 60px;
 }
 
 form .nameEmailFlex {
@@ -409,6 +413,14 @@ form textarea {
   padding: 20px;
 }
 
+form input {
+  width: 49%;
+}
+
+form textarea {
+  resize: none;
+}
+
 .footerIcon i {
   background: #E4A436;
   border-radius: 50%;
@@ -424,7 +436,12 @@ form textarea {
 
 header {
   background-color: #345231;
-  background-size: 50%;
+  height: 70vh;
+}
+
+header .circleText {
+  -webkit-transform: translate(50%, -15%);
+          transform: translate(50%, -15%);
 }
 
 header .homeFlex {
@@ -440,10 +457,26 @@ header .homeFlex {
   position: relative;
 }
 
+header .homeFlex .headerTextCont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 header .homeFlex .profileImg {
   width: 25%;
   -webkit-transform: translate(10px, 70px);
           transform: translate(10px, 70px);
+  position: relative;
+}
+
+.profileImg::before {
+  content: '';
+  background: #345231;
+  height: 15px;
+  width: 15px;
+  position: absolute;
+  left: 96%;
 }
 
 .about .who {
@@ -465,7 +498,7 @@ header .homeFlex .profileImg {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 5% 0 10% 0;
+  padding: 10% 0;
 }
 
 .about .who p {
@@ -498,7 +531,7 @@ header .homeFlex .profileImg {
 
 .favoriteBackground {
   background: #709b6b;
-  margin-top: 5%;
+  margin-top: 3%;
   margin-right: 2%;
   margin-bottom: 7%;
 }
@@ -566,6 +599,10 @@ footer .footerGrid {
   padding: 10% 0;
 }
 
+footer a {
+  color: black;
+}
+
 .footerFlex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -574,6 +611,12 @@ footer .footerGrid {
 
 .mainBlog {
   background: #f6f6f6;
+}
+
+.mainBlog a {
+  color: #709b6b;
+  font-weight: 900;
+  display: block;
 }
 
 .blog {
@@ -589,7 +632,7 @@ footer .footerGrid {
   font-size: 35px;
   font-size: 3.5rem;
   position: absolute;
-  top: 82.5%;
+  top: 81.5%;
   left: 10%;
 }
 
@@ -600,7 +643,6 @@ h4 {
   font-size: 1.2rem;
 }
 
-.aboutWillowTextbox,
 .profileimg,
 .recentTextbox,
 .articleTextbox,
@@ -609,9 +651,18 @@ h4 {
   padding: 30px;
 }
 
+.aboutWillowTextbox {
+  padding: 0 30px;
+  background: white;
+}
+
 .articleTextbox {
   margin-bottom: 20px;
   border-bottom: #709b6b solid 2px;
+}
+
+.recentTextbox {
+  margin-top: 20px;
 }
 
 .recentTextbox li {
@@ -623,9 +674,9 @@ h4 {
   padding: 5px;
 }
 
-a {
-  color: #709b6b;
-  font-weight: 900;
+.lastComment {
+  margin-top: 20px;
+  border-bottom: #709b6b solid 2px;
 }
 
 .blogGrid {
@@ -635,7 +686,6 @@ a {
       grid-template-columns: 1fr 2fr;
   grid-gap: 40px;
   margin-top: 10%;
-  padding: 5%;
 }
 
 .commentFlex {
@@ -653,6 +703,12 @@ a {
   background: #f6f6f6;
 }
 
+.mainContact a {
+  color: #345231;
+  font-size: 13px;
+  font-size: 1.3rem;
+}
+
 .contact {
   background-image: url(../willowAssets/contact-image-1.jpg);
   background-repeat: no-repeat;
@@ -666,7 +722,7 @@ a {
   font-size: 35px;
   font-size: 3.5rem;
   position: absolute;
-  top: 80%;
+  top: 81.5%;
   left: 10%;
 }
 
@@ -677,7 +733,6 @@ a {
       grid-template-columns: 1fr 2fr;
   grid-gap: 40px;
   margin-top: 5%;
-  padding: 5%;
 }
 
 .asideFlex {
@@ -689,7 +744,8 @@ a {
       -ms-flex-direction: column;
           flex-direction: column;
   background-color: white;
-  padding: 20px 10px 0 10px;
+  margin-top: 10%;
+  padding: 40px 20px 0 20px;
 }
 
 .asideFlex .socialFlex {
@@ -702,11 +758,210 @@ a {
   padding: 0 10px;
 }
 
-.asideFlex .socialFlex li a,
-.asideFlex .socialFlex li p {
-  color: #345231;
-}
-
 .info {
   font-weight: 900;
+}
+
+@media (max-width: 1045px) {
+  h1 {
+    font-size: 60px;
+    font-size: 6rem;
+  }
+}
+
+@media (max-width: 995px) {
+  header {
+    height: 80vh;
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(245, 246, 252, 0.52)), to(rgba(52, 82, 49, 0.73))), url(../willowAssets/home-image-1.png);
+    background: linear-gradient(to top, rgba(245, 246, 252, 0.52), rgba(52, 82, 49, 0.73)), url(../willowAssets/home-image-1.png);
+    background-color: #345231;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .homeFlex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding-top: 5%;
+  }
+  header .homeFlex .profileImg {
+    display: none;
+  }
+  h1 {
+    font-size: 80px;
+    font-size: 8rem;
+  }
+  .homeFlex {
+    padding-top: 20%;
+    right: 5%;
+  }
+  .about .who .whoTextbox {
+    padding-top: 15%;
+  }
+}
+
+@media (max-width: 850px) {
+  .about .who .whoTextbox {
+    width: 50%;
+  }
+  .about .who .whoTextbox h2 {
+    text-align: center;
+  }
+  .journeyFlex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .raincoatImg {
+    display: none;
+  }
+}
+
+@media (max-width: 740px) {
+  .wrapperContain {
+    width: 90%;
+  }
+  h1 {
+    font-size: 60px;
+    font-size: 6rem;
+  }
+  header .circleText {
+    width: 20%;
+  }
+  .about .who .whoTextbox {
+    width: 100%;
+  }
+  .articleFlex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .bucketlistTextbox,
+  .favoriteTextbox {
+    width: 100%;
+    padding: 5%;
+    text-align: center;
+  }
+  .bucketlistTextbox {
+    padding-bottom: 10%;
+  }
+  .wrapperContain {
+    width: 95%;
+  }
+  .contactGrid,
+  .blogGrid {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .aboutWillow {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .contact h1,
+  .blog h1 {
+    top: 50%;
+    text-align: center;
+    left: 5%;
+  }
+  .aboutWillowTextbox,
+  .profileimg {
+    margin-top: 20px;
+  }
+  .aboutTextFlex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-left: 20px;
+  }
+  .aboutWillowTextbox {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 570px) {
+  .navFlexgroup {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .navFlexgroup li {
+    padding: 5px 0;
+  }
+}
+
+@media (max-width: 545px) {
+  h1 {
+    font-size: 50px;
+    font-size: 5rem;
+  }
+  header .circleText {
+    width: 20%;
+  }
+  .homeFlex {
+    padding-top: 30%;
+  }
+  .gallery {
+    display: none;
+  }
+  .aboutWillow {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer .footerGrid {
+    -ms-grid-rows: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  form .nameEmailFlex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  form input {
+    width: 100%;
+    margin: 5px;
+  }
+}
+
+@media (max-width: 470px) {
+  .homeFlex {
+    padding-top: 40%;
+  }
+  h1 {
+    font-size: 40px;
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 350px) {
+  h1 {
+    font-size: 40px;
+    font-size: 4rem;
+  }
+  .homeFlex {
+    padding-top: 50%;
+  }
+  nav ul a, nav .navFlexgroup a {
+    padding: 0 5px;
+  }
+  h1 {
+    font-size: 30px;
+    font-size: 3rem;
+  }
 }

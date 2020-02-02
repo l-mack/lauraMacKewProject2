@@ -23,6 +23,7 @@ ul,
 h1,
 h2,
 h3,
+h4,
 p,
 a,
 i{
@@ -30,10 +31,8 @@ i{
 	padding: 0;
 }
 
-header,
-main,
-section,
-footer{
+.mainContact,
+.mainBlog{
   overflow: hidden;
 }
 
@@ -71,7 +70,8 @@ nav{
   padding: 20px;
   text-transform: uppercase;
 
-  ul{
+  ul,
+  .navFlexgroup{
     @include centerFlex;
 
     p{
@@ -92,8 +92,8 @@ nav{
   }
 }
 
-a:hover,
-a:focus{
+nav a:hover,
+nav a:focus{
   color: $accent;
 
 }
@@ -124,7 +124,7 @@ h3{
 }
 
 p{
-  @include fontSize(8);
+  @include fontSize(9);
   font-family: $secondaryFont;
   line-height: 20px;
   padding: 10px;
@@ -133,19 +133,21 @@ p{
 button{
   border: none;
   padding: 10px 15px;
+  margin-top: 10px;
   font-family: $primaryFont;
   text-transform: uppercase;
   background: $accent;
-  @include fontSize(8);
+  @include fontSize(9);
   cursor: pointer;
 }
 
 // form styling 
 
 form{
-  margin-top: 10px;
+  margin-top: 5%;
   display: flex;
   flex-direction: column;
+  margin-bottom: 60px;
   .nameEmailFlex{
     display: flex;
     justify-content: space-between;
@@ -156,10 +158,13 @@ form{
     border: none;
     border-radius: 2px;
     padding: 20px;
-    
   }
-  
-
+  input{
+    width: 49%;
+  }
+  textarea{
+    resize: none;
+  }
 }
 
 

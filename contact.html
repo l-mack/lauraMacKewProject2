@@ -11,17 +11,23 @@
 </head>
 <body>
 
-    <!-- nav begins  -->
-    <nav>
-        <ul class="navFlex">
-            <li><a href="#home">home</a></li>
-            <li><a href="#about">about</a></li>
-            <li><p class='logo'>willow</p></li>
-            <li><a href="#blog">blog</a></li>
-            <li><a href="#contact">contact</a></li>
-        </ul>
-    <!-- nav ends  -->
-    </nav>
+<!-- nav begins  -->
+<nav>
+    <ul class="navFlex">
+        <div class="navFlexgroup">
+            <li><a href="./index.html">home</a></li>
+            <li><a href="./index.html#about">about</a></li>
+        </div>
+        <li><p class='logo'>willow</p></li>
+        <div class="navFlexgroup">
+            <li><a href="./blog.html">blog</a></li>
+            <li><a href="./contact.html">contact</a></li>
+        </div>
+        
+    </ul>
+<!-- nav ends  -->
+</nav>
+
 
      <!-- contact header begins  -->
      <header class="contact" id='contact'>
@@ -33,6 +39,7 @@
      <main class='mainContact'>
         <!-- start of contact wrapper  -->
         <div class="wrapper wrapperContain">
+
             <!-- contact grid start  -->
             <div class="contactGrid">
 
@@ -41,10 +48,26 @@
                     <div class="asideFlex">
                 
                         <ul class="socialFlex">
-                            <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href=""><i class="fab fa-twitter"></i></a></li>
-                            <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
-                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                            <li>
+                                <a href="#" aria-label="link to Willow's facebook">
+                                    <i aria-hidden="true" class="fab fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" aria-label="link to Willow's twitter">
+                                    <i aria-hidden="true" class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" aria-label="link to Willow's linkedin">
+                                    <i aria-hidden="true" class="fab fa-linkedin-in"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" aria-label="link to Willow's instagram">
+                                    <i aria-hidden="true" class="fab fa-instagram"></i>
+                                </a>
+                            </li>
                         </ul>
                         
                         <p class="info">info@email.com</p>

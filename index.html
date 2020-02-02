@@ -12,17 +12,22 @@
 </head>
 <body>
 
-    <!-- nav begins  -->
-    <nav>
-        <ul class="navFlex">
-            <li><a href="#home">home</a></li>
-            <li><a href="#about">about</a></li>
-            <li><p class='logo'>willow</p></li>
-            <li><a href="#blog">blog</a></li>
-            <li><a href="#contact">contact</a></li>
-        </ul>
-    <!-- nav ends  -->
-    </nav>
+<!-- nav begins  -->
+<nav>
+    <ul class="navFlex">
+        <div class="navFlexgroup">
+            <li><a href="./index.html">home</a></li>
+            <li><a href="./index.html#about">about</a></li>
+        </div>
+        <li><p class='logo'>willow</p></li>
+        <div class="navFlexgroup">
+            <li><a href="./blog.html">blog</a></li>
+            <li><a href="./contact.html">contact</a></li>
+        </div>
+        
+    </ul>
+<!-- nav ends  -->
+</nav>
 
     <!-- header begins  -->
     <header class='home' id='home'>
@@ -31,10 +36,13 @@
 
             <!-- homeFlex begins  -->
             <div class="homeFlex">
-                <div class="circleText imgCont">
-                    <img src="./willowAssets/circle-text.png" alt="daily musings of">
+                <div class="headerTextCont">
+                    <div class="circleText imgCont">
+                        <img src="./willowAssets/circle-text.png" alt="daily musings of">
+                    </div>
+                    <h1>willow</h1>
                 </div>
-                <h1>willow</h1>
+                
                 <div class="profileImg imgCont">
                     <img src="./willowAssets/home-image-1.jpg" alt="picture of Willow website author">
                 </div>
@@ -45,7 +53,6 @@
         </div>
     <!-- header ends  -->
     </header>
-
     <!-- main begins  -->
     <main class="about" id='about'>
 
@@ -138,12 +145,12 @@
         </section>
 
         <!-- start of gallery section  -->
-        <section class="gallery">
+        <section class="gallery" id='gallery'>
             <div class="wrapper wrapperContain">
                 <ul class='galleryFlex'> 
-                    <li class=galleryImg><img src="./willowAssets/home-image-6.jpg" alt="country road"></li>
-                    <li class=galleryImg><img src="./willowAssets/home-image-7.jpg" alt="bowl of lemons"></li>
-                    <li class=galleryImg><img src="./willowAssets/home-image-8.jpg" alt="iron rod staircase"></li>
+                    <li class=galleryImg1><img src="./willowAssets/home-image-6.jpg" alt="country road"></li>
+                    <li class=galleryImg2><img src="./willowAssets/home-image-7.jpg" alt="bowl of lemons"></li>
+                    <li class=galleryImg3><img src="./willowAssets/home-image-8.jpg" alt="iron rod staircase"></li>
                 </ul>
             <!-- end of gallery wrapper  -->
             </div>
@@ -161,7 +168,8 @@
             <div class="footerGrid">
                 <div class="footerFlex">
                     <div class="footerIcon">
-                        <i class="fas fa-image"></i>
+                        <a href="#gallery" aria-label="link to the gallery section">
+                        <i aria-hidden="true" class="fas fa-image"></i></a>
                     </div>
                     <div class="footerTextbox">
                         <h3>photos</h3>
@@ -170,7 +178,7 @@
                 </div>
                 <div class="footerFlex">
                     <div class="footerIcon">
-                        <i class="fas fa-user-alt"></i>  
+                        <a href="#about" aria-label="link to about section"><i aria-hidden="true" class="fas fa-user-alt"></i></a>  
                     </div>
                     
                     <div class="footerTextbox">
@@ -180,7 +188,7 @@
                 </div>
                 <div class="footerFlex">
                     <div class="footerIcon">
-                        <i class="fas fa-tv"></i>
+                        <a href="./blog.html" aria-label="link to blog section"><i aria-hidden="true" class="fas fa-tv"></i></a>
                     </div>
                     
                     <div class="footerTextbox">
@@ -191,7 +199,8 @@
                 </div>
                 <div class="footerFlex">
                     <div class="footerIcon">
-                        <i class="fas fa-phone"></i>
+                        <a href="./contact.html" aria-label="link to contact me section"><i aria-hidden="true" class="fas fa-phone"></i></a>
+                        
                     </div>
                     <div class="footerTextbox">
                         <h3>contact me</h3>

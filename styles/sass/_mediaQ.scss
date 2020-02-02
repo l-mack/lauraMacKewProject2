@@ -1,0 +1,206 @@
+
+
+@media (max-width: 1045px){
+        h1{
+            @include fontSize(60);
+        }
+    }
+
+@media (max-width: 995px){
+    header{
+        height: 80vh;
+        background: linear-gradient(to top, rgba(245, 246, 252, 0.52), rgba(52, 82, 49, 0.73)), url(../willowAssets/home-image-1.png);
+        background-color: $pine;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .homeFlex{
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 5%;
+    }
+
+    header .homeFlex .profileImg{
+        display: none;
+    }
+
+    h1{
+        @include fontSize(80);
+    }
+
+    .homeFlex{
+        padding-top: 20%;
+        right: 5%
+    }
+
+    .about .who .whoTextbox{
+        padding-top: 15%;
+    }
+}
+
+@media (max-width: 850px){
+
+    .about .who .whoTextbox{
+        width: 50%;
+        h2{
+            text-align: center;
+        }
+    }
+
+    .journeyFlex{
+        flex-direction: column;
+    }
+
+    .raincoatImg{
+        display: none;
+    }
+
+}
+
+@media (max-width: 740px){
+
+    .wrapperContain{
+        width: 90%;;
+    }
+
+    h1{
+        @include fontSize(60);
+    }
+
+    header .circleText{
+        width: 20%;
+    }
+
+    .about .who .whoTextbox{
+        width: 100%;
+    }
+
+    .articleFlex{
+        flex-direction: column;
+    }
+
+    .bucketlistTextbox,
+    .favoriteTextbox{
+        width: 100%;
+        padding: 5%;
+        text-align: center;
+    }
+
+    .bucketlistTextbox{
+        padding-bottom: 10%;
+    }
+
+    .wrapperContain{
+        width: 95%;
+    }
+
+    .contactGrid,
+    .blogGrid{
+        grid-template-columns: 1fr;
+    }
+
+    .aboutWillow{
+        display: flex;
+    }
+
+    .contact h1,
+    .blog h1{
+        top: 50%;
+        text-align: center;
+        left: 5%;
+    }
+
+    .aboutWillowTextbox,
+    .profileimg{
+        margin-top: 20px;
+    }
+
+    .aboutTextFlex{
+        display: flex;
+        flex-direction: column;
+        margin-left: 20px;
+    }
+
+    .aboutWillowTextbox{
+        padding: 30px;
+    }
+
+}
+
+@media (max-width: 570px){
+    .navFlexgroup{
+        flex-direction: column;
+        li{
+            padding: 5px 0;
+        }
+    }
+}
+
+@media (max-width: 545px){
+
+    h1{
+        @include fontSize(50);
+    }
+
+    header .circleText{
+        width: 20%;
+    }
+
+    .homeFlex{
+        padding-top: 30%;
+    }
+
+    .gallery{
+            display: none;
+    }
+
+    .aboutWillow{
+        flex-direction: column;
+    }
+
+    footer{
+        .footerGrid{
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            grid-template-columns: 1fr;
+        }
+    }
+
+    form .nameEmailFlex{
+        flex-direction: column;
+    }
+
+    form input{
+        width: 100%;
+        margin: 5px;
+    }
+}
+
+@media (max-width: 470px){
+
+    .homeFlex{
+        padding-top: 40%;
+    }
+
+    h1{
+        @include fontSize(40);
+    }
+}
+
+@media (max-width: 350px){
+        h1{
+            @include fontSize(40);
+        }
+        .homeFlex{
+        padding-top: 50%;
+    }
+
+    nav ul a, nav .navFlexgroup a{
+        padding: 0 5px;
+    }
+
+    h1{
+        @include fontSize(30);
+    }
+
+
+}

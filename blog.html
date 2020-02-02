@@ -13,17 +13,22 @@
     <!-- nav begins  -->
     <nav>
         <ul class="navFlex">
-            <li><a href="#home">home</a></li>
-            <li><a href="#about">about</a></li>
+            <div class="navFlexgroup">
+                <li><a href="./index.html">home</a></li>
+                <li><a href="./index.html#about">about</a></li>
+            </div>
             <li><p class='logo'>willow</p></li>
-            <li><a href="#blog">blog</a></li>
-            <li><a href="#contact">contact</a></li>
+            <div class="navFlexgroup">
+                <li><a href="./blog.html">blog</a></li>
+                <li><a href="./contact.html">contact</a></li>
+            </div>
+            
         </ul>
     <!-- nav ends  -->
     </nav>
 
      <!-- blog header begins  -->
-     <header class='blog' id='blog'>
+     <header class='blog' id='./blog'>
         <h1>blog & news</h1>
 
     <!-- blog header ends  -->
@@ -41,20 +46,26 @@
                     <div class="imgCont profileimg">
                         <img src="./willowAssets/blog-image-2.jpg" alt="profile image of Willow, site author">
                     </div>
-                    <div class="aboutWillowTextbox">
-                        <h4>about willow</h4>
-                        <p>Lyft pour-over shaman, chambray craft beer stumptown dreamcatcher church-key.  <a href="#">Find out more.</a></p>
-                        
+                    <!-- aboutTextFlex start -->
+                    <div class="aboutTextFlex">
+                        <div class="aboutWillowTextbox">
+                            <h4>about willow</h4>
+                            <p>Lyft pour-over shaman, chambray craft beer stumptown dreamcatcher church-key.  
+                                <a href="#">Find out more.</a></p>
+                            
+                        </div>
+                        <div class="recentTextbox">
+                            <h4>recent posts</h4>
+                            <ul>
+                                <li>Hashtag activated</li>
+                                <li>Mustache ennui semiotics</li>
+                                <li>Normcore street art</li>
+                                <li>VHS succulents</li>
+                            </ul>
+                        </div>
+                    <!-- end of aboutTextFlex  -->
                     </div>
-                    <div class="recentTextbox">
-                        <h4>recent posts</h4>
-                        <ul>
-                            <li>Hashtag activated</li>
-                            <li>Mustache ennui semiotics</li>
-                            <li>Normcore street art</li>
-                            <li>VHS succulents</li>
-                        </ul>
-                    </div>
+                    
                 
                 </aside>
 
@@ -81,11 +92,11 @@
                             <p class="date">Tuesday October 9th, 2018 by Barb</p>
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur tempora aperiam necessitatibus adipisci beatae voluptas et, blanditiis repudiandae repellat placeat.</p>
                         </div>
-                    <!-- end of commentBarbFlex  -->
+                    <!-- end of commentTextbox  -->
                     </div>
 
-                    <!-- start of commentBarbFlex  -->
-                    <div class="commentFlex">
+                    <!-- start of commentTextbox  -->
+                    <div class="commentFlex lastComment">
                         <div class="imgComment imgCont">
                             <img src="./willowAssets/blog-image-4.jpg" alt="profile picture of commenter">
                         </div>
@@ -108,7 +119,6 @@
             
                         <label for="comment" class='visuallyHidden'>Comment</label>
         
-                        <label for="comment" class='visuallyHidden'>comment</label>
                         <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
             
                         <button type="submit">post</button>
